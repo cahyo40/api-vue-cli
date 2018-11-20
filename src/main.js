@@ -8,6 +8,8 @@ import daftarpengguna from './komponen/pengguna.vue'
 import Tambah from './komponen/Tambah.vue'
 import login from './komponen/login.vue'
 import home from './komponen/home.vue'
+import produk from './komponen/produk.vue'
+import regis from './komponen/registrasi.vue'
 
 
 Vue.use(VueRouter);
@@ -16,10 +18,12 @@ Vue.use(VueSession);
 
 const router = new VueRouter({
   routes:[
-    {path:'/',name:'home',component:home},
+    {path :'/',name:'home',component:login},
     {path :'/pengguna',name :'pengguna',component : daftarpengguna},
     {path :'/add',name : 'Tambah',component : Tambah,},
-    {path:'/login',name:'Login',component:login}
+    {path :'/login',name:'Login',component:login},
+    {path :'/pengguna/produk',name:'produk',component:produk},
+    {path :'/registrasi',name:regis,component:regis}
   ]
 });
 
